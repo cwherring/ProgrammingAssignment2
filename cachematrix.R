@@ -5,6 +5,17 @@
 ## the same, the inverse will be recalculated using the new matrix, the value will
 ## be cached, and the new inverse will be returned.
 
+## Usage: x <- matrix(c(1,2,3,3,2,1,4,2,3), nrow = 3, ncol = 3)
+##        y <- makeCacheMatrix(x) 
+##        cacheSolve(y)
+
+## Expected Answer:
+##           [,1]       [,2]       [,3]
+##[1,] -0.3333333  0.4166667  0.1666667
+##[2,]  0.0000000  0.7500000 -0.5000000
+##[3,]  0.3333333 -0.6666667  0.3333333
+
+
 ## The function makeCacheMatrix will accept an arguement containing a square matrix.
 ## It will then calculate and return the inverse of that matrix.
 makeCacheMatrix <- function(x = matrix()) {
